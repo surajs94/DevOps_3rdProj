@@ -1,5 +1,6 @@
 FROM centos:latest
 MAINTAINER brand293245222@gmail.com
+RUN apk add --update linux-headers
 RUN yum install -y httpd \
   zip \
   unzip
