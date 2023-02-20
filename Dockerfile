@@ -46,10 +46,18 @@ RUN dnf distro-sync -y
 RUN yum install -y httpd \
   zip \
   unzip
+<<<<<<< HEAD
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page265/shine.zip /var/www/html/
 WORKDIR /var/www/html
 RUN unzip shine.zip
 RUN cp -rvf shine/* .
 RUN rm -rf shine shine.zip
+=======
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page254/photogenic.zip /var/www/html/
+WORKDIR /var/www/html
+RUN unzip photogenic.zip
+RUN cp -rvf photogenic/* .
+RUN rm -rf photogenic photogenic.zip
+>>>>>>> a9c6cf059b16b10fb0868c3ef372ca436493d0d9
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND" ]
 EXPOSE 80
